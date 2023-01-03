@@ -27,6 +27,7 @@ function TodoPaper({ user }) {
   }, []);
 
   useEffect(() => {
+    console.log(isFetch);
     if (isFetch) {
       const stored = JSON.parse(localStorage.getItem(storedItems));
       if (stored) setTodo(stored);
