@@ -44,12 +44,16 @@ function Register() {
       //   rePassword !== "" &&
       //   password === rePassword
     ) {
+      let uuid = "";
+      if (window !== undefined) {
+        uuid = window.crypto.randomUUID();
+      }
       localStorage.setItem(
         userData,
         JSON.stringify([
           ...data,
           {
-            id: Crypto.randomUUID(),
+            id: uuid,
             name: username,
             gender: gender,
             password: password,
