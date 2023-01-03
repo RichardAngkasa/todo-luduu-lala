@@ -3,8 +3,7 @@ import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 
-function TodoPaper({ user }) {
-  console.log(user);
+function TodoPaper() {
   const [todo, setTodo] = useState([]);
   const [input, setInput] = useState("");
   const [isFetch, setIsFetch] = useState(true);
@@ -27,7 +26,6 @@ function TodoPaper({ user }) {
   }, []);
 
   useEffect(() => {
-    console.log(isFetch);
     if (isFetch) {
       const stored = JSON.parse(localStorage.getItem(storedItems));
       if (stored) setTodo(stored);
