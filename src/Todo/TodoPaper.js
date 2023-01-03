@@ -32,7 +32,7 @@ function TodoPaper({ user }) {
       const stored = JSON.parse(localStorage.getItem(storedItems));
       if (stored) setTodo(stored);
     }
-    return () => setIsFetch(false);
+    setIsFetch(false);
   }, [isFetch]);
 
   const changeHandler = (e) => {
