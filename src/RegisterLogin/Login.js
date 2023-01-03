@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
-import TodoPaper from "../Todo/TodoPaper";
 
 function Login() {
   const [name, setName] = useState("");

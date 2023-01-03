@@ -49,7 +49,7 @@ function Register() {
         JSON.stringify([
           ...data,
           {
-            id: crypto.randomUUID(),
+            id: Crypto.randomUUID(),
             name: username,
             gender: gender,
             password: password,
